@@ -3355,8 +3355,9 @@ declare function Page(page: PageOpts): void;
 declare function getApp(): IApp;
 declare function getCurrentPages(): IPage[];
 
-
 // TODO: Component and Behavior: https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html
+declare function Component(component: ComponentOpts): any;
+declare function Behavior(behavior: BehaviorOpts): any;
 
 // 模块化 https://developers.weixin.qq.com/miniprogram/dev/reference/api/require.html
 /**
