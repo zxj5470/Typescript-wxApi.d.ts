@@ -3354,3 +3354,25 @@ declare function App(app: AppOpts): void;
 declare function Page(page: PageOpts): void;
 declare function getApp(): IApp;
 declare function getCurrentPages(): IPage[];
+
+
+// TODO: Component and Behavior: https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html
+
+// 模块化 https://developers.weixin.qq.com/miniprogram/dev/reference/api/require.html
+/**
+ * 引入模块。返回模块通过 module.exports 或 exports 暴露的接口。
+ * @param path 需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径
+ */
+declare function require(path: string): any;
+
+/**
+ * 模块向外暴露的对象，使用require引用该模块时可以获取示例代码
+ */
+declare var module: WxModule;
+/**
+ * module.exports 的引用
+ */
+declare var exports: any;
+interface WxModule {
+	exports: any;
+}
